@@ -1,0 +1,18 @@
+namespace db
+{
+    class Schema
+    {
+	    string Name;
+    	List<Table> Tables;
+    }
+    class Table
+    {
+    	string Name;
+    	List<Column> Columns;
+    }
+    class Column
+    {
+    	string Name;
+    	string Type;
+    }
+}

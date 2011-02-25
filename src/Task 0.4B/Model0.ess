@@ -1,0 +1,14 @@
+using lwc11;
+
+namespace lwc11.model0
+{
+  	//Define primitive types as needed
+    Type string
+    {
+        Name = "string";
+    }
+    Type date
+    {
+        Name = "date";
+    }
+}

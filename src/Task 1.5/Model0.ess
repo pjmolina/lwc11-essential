@@ -1,0 +1,63 @@
+using lwc11;
+
+namespace lwc11.model0
+{
+    Model m0
+    {
+        PrimitiveTypes = [string, date];
+        Entities = [Person, Car];
+    }
+    //Define primitive types as needed
+    Type string
+    {
+        Name = "string";
+    }
+    Type date
+    {
+        Name = "date";
+    }
+
+    Entity Person
+    {
+    	Name = "Person";
+    	Properties = [
+    		Property pe1
+    		{
+    			Name = "name";
+    			Type = string;
+    		},
+    		Property pe2
+    		{
+    			Name = "firstname";
+    			Type = string;
+    		},
+    		Property pe3
+    		{
+    			Name = "birthdate";
+    			Type = date;
+    		},
+    		Property pe4
+    		{
+    			Name = "ownedCar";
+    			Type = Car;
+    		}
+    	];
+    }
+
+    Entity Car
+    {
+    	Name = "Car";
+    	Properties = [
+    		Property p0
+    		{
+    			Name = "make";
+    			Type = string;
+    		},
+    		Property p1
+    		{
+    			Name = "model";
+    			Type = string;
+    		}
+    	];    
+    }
+}

@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<EssentialProject xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" Name="lwc11" Author="pjmolina" LastChange="2011-02-24T20:30:00.8955078+01:00">
+ <Property Key="Version" Value="0.01" />
+ <Property Key="OutputDir" Value=".\bin" />
+ <Content>
+  <File Path="lwc11.meta" />
+  <File Path="Model0.ess" />
+  <File Path="Control.ctl" />
+  <File Path="javaPojo.stg" />
+  <File Path="metaExtension1.meta" />
+ </Content>
+</EssentialProject>

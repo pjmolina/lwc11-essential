@@ -1,0 +1,21 @@
+namespace lwc11
+{
+    class Model
+    {
+        List<Type> PrimitiveTypes; 
+        List<Entity> Entities; 
+    }
+    class Type
+    {
+        string Name;
+    }
+    class Entity : Type
+    {
+        List<Property> Properties;
+    }
+    class Property
+    {
+        Type Type;
+        string Name;
+    }
+}

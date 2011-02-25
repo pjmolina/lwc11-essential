@@ -1,0 +1,9 @@
+using settings;
+
+namespace generationSettings
+{
+	GenerationSettings sets
+	{
+		TargetLanguage = Language.Java;
+	}
+} 

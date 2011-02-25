@@ -1,0 +1,13 @@
+namespace settings
+{
+	enum Language
+	{
+		Java,
+		CSharp
+	}
+
+    class GenerationSettings
+    {	
+    	Language TargetLanguage;
+    }
+}

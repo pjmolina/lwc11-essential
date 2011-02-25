@@ -1,0 +1,37 @@
+group javaPojo;
+
+genPojo(entity) ::= <<
+import java.lang.*;
+import java.io.*;
+import java.util.*;
+
+public class $entity.Name$ implements Serializable {
+	//Private members
+	$entity.Properties:genPrivateMember(); separator="\n"$
+
+	//Public accessors 
+	$entity.Properties:genMemberAccessors(); separator="\n\n"$
+}
+>>
+
+genPrivateMember()::= <<
+private $it.Type:genType()$ $it.Name; format="camelcase"$;
+>>
+
+genType()::= <<$typeMapper.(it.Name)$>>
+
+genMemberAccessors()::= <<
+public $it.Type:genType()$ get$it.Name; format="pascalcase"$() {
+        return $it.Name; format="camelcase"$;
+}
+public void set$it.Name; format="pascalcase"$($it.Type:genType()$ value) {
+        this.$it.Name; format="camelcase"$ = value;
+}
+>>
+
+typeMapper ::= 
+[
+	  "string" : "String",
+	  "date"   : "Date",
+	  default  : key		
+]

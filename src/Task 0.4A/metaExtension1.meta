@@ -1,0 +1,11 @@
+namespace lwc11
+{
+    class Entity 
+    {
+       string Label;
+    }    
+    class Property
+    {
+       int? Size;
+    }    
+}

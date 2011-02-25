@@ -1,0 +1,45 @@
+//csharpPoco.stg
+group csharpPoco;
+
+
+typeMapper ::= 
+[
+	  "string" : "string",
+	  "Date"   : "DateTime",
+	  default  : key		
+]
+
+genPoco(entity) ::= <<
+using System;
+using System.Collection.Generics;
+
+namespace Demo.Pocos
+{
+	[Serializable]
+	public class $entity.Name; format="pascalcase"$
+	{
+	  public $entity.Name; format="pascalcase"$() {}
+	
+	  //Private members
+	  $entity.Properties:genPrivateMember(); separator="\n"$
+	
+	  //Public accessors
+	  $entity.Properties:genMemberAccessors(); separator="\n\n"$
+	}
+}
+>>
+
+genPrivateMember()::= <<
+private $it.Type:genType()$ $it.Name; format="camelcase"$;
+>>
+
+genType()::= <<$typeMapper.(it.Name)$>>
+
+genMemberAccessors()::= <<
+public $it.Type:genType()$ $it.Name; format="pascalcase"$ 
+{
+	get { return $it.Name; format="camelcase"$; }
+	set { this.$it.Name; format="camelcase"$ = value; }
+}
+>>
+

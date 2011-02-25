@@ -1,0 +1,50 @@
+using lwc11;
+
+namespace lwc11.model0
+{
+	//Entities
+    Entity Person
+    {
+    	Name = "Person";
+    	Label = "Persona";
+    	Properties = [
+    		Property pe1
+    		{
+    			Name = "name";
+    			Type = string;
+    		},
+    		Property pe2
+    		{
+    			Name = "firstname";
+    			Type = string;
+    		},
+    		Property pe3
+    		{
+    			Name = "birthdate";
+    			Type = date;
+    		},
+    		Property pe4
+    		{
+    			Name = "ownedCar";
+    			Type = Car;
+    		}
+    	];
+    }
+    Entity Car
+    {
+    	Name = "Car";
+    	Label="Coche";
+    	Properties = [
+    		Property p0
+    		{
+    			Name = "make";
+    			Type = string;
+    		},
+    		Property p1
+    		{
+    			Name = "model";
+    			Type = string;
+    		}
+    	];    
+    }
+}

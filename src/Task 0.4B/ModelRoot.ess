@@ -1,0 +1,10 @@
+using lwc11;
+
+namespace lwc11.model0
+{
+    Model m0
+    {
+        PrimitiveTypes = [string, date];
+        Entities = [Person, Car];
+    }
+}
