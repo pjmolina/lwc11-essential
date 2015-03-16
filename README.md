@@ -5,7 +5,7 @@ The aim is to set a common task for Language Workbenches which is implemented wi
 
 This project shows how to accomplish the tasks with [Essential](http://pjmolina.com/metalevel/essential).
 
-* Review the [LWC 2011 Challenge](http://www.languageworkbenches.net/LWCTask-1.0.pdf)
+* Review the [LWC 2011 Challenge](http://www.languageworkbenches.net/wp-content/uploads/2013/11/LWCTask-1.0.pdf)
 * Review the proposed [solution](https://github.com/pjmolina/lwc11-essential/raw/master/lwc11-essential.pdf) (Essential flavour)
 * Download the tool [Essential](http://pjmolina.com/essential/download-eval)
 
